@@ -6,7 +6,7 @@
   "optimizer": {
     "type": "Adam",
     "params": {
-      "lr": 0.0002,
+      "lr": 0.00001,
       "betas": [
         0.8,
         0.999
@@ -22,7 +22,7 @@
     "type": "WarmupLR",
     "params": {
       "warmup_min_lr": 0,
-      "warmup_max_lr": 0.0002,
+      "warmup_max_lr": 0.00001,
       "warmup_num_steps": 1000
     }
   },
