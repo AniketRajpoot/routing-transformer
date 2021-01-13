@@ -1933,7 +1933,7 @@ NUM_BATCHES = int(1e5)
 NUM_ITERATIONS = 1051
 BATCH_SIZE = 1
 GRADIENT_ACCUMULATE_EVERY = 4
-LEARNING_RATE = 1e-5
+LEARNING_RATE = 1e-4
 SAVE_EVERY  = 100
 GENERATE_EVERY  = 500
 GENERATE_LENGTH = 20000
@@ -1958,13 +1958,13 @@ def load_optimizer_transformer(checkpoint,optimizer):
 
 model = RoutingTransformerLM(
     num_tokens = 1024,
-    dim = 768,
-    depth = 6,
+    dim = 1024,
+    depth = 18,
     max_seq_len = SEQ_LENGTH,
     heads = 8,
     causal = True,
     window_size = 128,
-    n_local_attn_heads = (8, 8, 8, 4, 4, 4)
+    n_local_attn_heads = 4
 )
 
 model = AutoregressiveWrapper(model)
